@@ -29,10 +29,12 @@
 -IC:\Users\mmasili\.platformio\packages\framework-arduinoavr\libraries\Temboo\src
 -IC:\Users\mmasili\.platformio\packages\framework-arduinoavr\libraries\WiFi\src
 -IC:\Users\mmasili\.platformio\packages\toolchain-atmelavr\avr\include
--IC:\Users\mmasili\.platformio\packages\toolchain-atmelavr\lib\gcc\avr\4.9.2\include
--IC:\Users\mmasili\.platformio\packages\toolchain-atmelavr\lib\gcc\avr\4.9.2\include-fixed
+-IC:\Users\mmasili\.platformio\packages\toolchain-atmelavr\lib\gcc\avr\5.4.0\include
+-IC:\Users\mmasili\.platformio\packages\toolchain-atmelavr\lib\gcc\avr\5.4.0\include-fixed
 -IC:\Users\mmasili\.platformio\packages\tool-unity
--DPLATFORMIO=30601
+-IC:\SERVERS\SVILUPPO\FANsFirmware\PCFANsFirmware\include
+-IC:\SERVERS\SVILUPPO\FANsFirmware\PCFANsFirmware\src
+-DPLATFORMIO=30602
 -DARDUINO_AVR_UNO
 -DF_CPU=16000000L
 -DARDUINO_ARCH_AVR
