@@ -2,7 +2,7 @@
 #include <Arduino.h>    // Su un file .ino non è necessario
 
 /*
-Schetch di test sulle ventole per PC
+Schetch di test sulle ventole per PC di input e ourput
 */
 
 // PIN a cui è collegato il cavo + che alimenta la ventola 1
@@ -36,27 +36,40 @@ void loop()
 
     Serial.println( "Accendo ventola di input alla velocità di defalt" );
 
-    // Accendo la ventola 1 alla velocità di defalt
+    // Accendo la ventola di input alla velocità di defalt
     PCFANRotate( INPUT_FAN_PIN );
 
 	delay( 10000 );
 
     Serial.println( "Spengo la ventola di input" );
 
-    // Spengo la ventola 1
+    // Spengo la ventola di input
 	PCFANStop( INPUT_FAN_PIN );
 
 	Serial.println( "Accendo ventola di output alla velocità definita" );
 
-    // Accendo la ventola 1 alla velocità definita
+    // Accendo la ventola di output alla velocità definita
     PCFANRotate( OUTPUT_FAN_PIN, FAN_MANUAL_MODE, 1000 );
 
 	delay( 10000 );
 
     Serial.println( "Spengo la ventola di output" );
 
-    // Spengo la ventola 2
+    // Spengo la ventola di output
 	PCFANStop( OUTPUT_FAN_PIN );
+
+    Serial.println( "Accendo ventola di input alla velocità di defalt" );
+
+    // Accendo la ventola di input alla velocità impostata automaticamente
+    // a seconda della temperatura rilevata all'interno del Maslow Control Box
+    PCFANRotate( INPUT_FAN_PIN, FAN_AUTO_MODE );
+
+	delay( 10000 );
+
+    Serial.println( "Spengo la ventola di input" );
+
+    // Spengo la ventola di input
+	PCFANStop( INPUT_FAN_PIN );
 }
 
 void DebugSetup()
